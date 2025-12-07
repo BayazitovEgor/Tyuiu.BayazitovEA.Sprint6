@@ -17,7 +17,7 @@ namespace Tyuiu.BayazitovEA.Sprint6.Task1.V1.Lib
                 
                 y = Math.Round(Math.Cos(2 * x) + (Math.Sin(x) / (x + 2.5)) + 2 * x, 2);
                 results[count] = y;
-                if (x == 0) { results[count] = 0; }
+
                 count++;
             }
 
