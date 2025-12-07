@@ -30,11 +30,13 @@
         {
             buttondone = new Button();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textBoxInPut = new TextBox();
+            buttonHelp = new Button();
             SuspendLayout();
             // 
             // buttondone
             // 
+            buttondone.FlatStyle = FlatStyle.Flat;
             buttondone.Location = new Point(649, 345);
             buttondone.Name = "buttondone";
             buttondone.Size = new Size(128, 93);
@@ -45,25 +47,39 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(155, 84);
+            textBox1.BackColor = SystemColors.Window;
+            textBox1.Location = new Point(649, 316);
             textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxInPut
             // 
-            textBox2.Location = new Point(65, 180);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 2;
-            textBox2.TextChanged += textBox2_TextChanged;
+            textBoxInPut.Location = new Point(293, 316);
+            textBoxInPut.Name = "textBoxInPut";
+            textBoxInPut.Size = new Size(124, 23);
+            textBoxInPut.TabIndex = 2;
+            textBoxInPut.TextChanged += textBoxInPut_TextChanged;
+            // 
+            // buttonHelp
+            // 
+            buttonHelp.FlatStyle = FlatStyle.Flat;
+            buttonHelp.Location = new Point(568, 356);
+            buttonHelp.Name = "buttonHelp";
+            buttonHelp.Size = new Size(75, 71);
+            buttonHelp.TabIndex = 3;
+            buttonHelp.Text = "?";
+            buttonHelp.UseVisualStyleBackColor = true;
+            buttonHelp.Click += buttonHelp_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox2);
+            Controls.Add(buttonHelp);
+            Controls.Add(textBoxInPut);
             Controls.Add(textBox1);
             Controls.Add(buttondone);
             Name = "Form1";
@@ -76,6 +92,7 @@
 
         private Button buttondone;
         private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textBoxInPut;
+        private Button buttonHelp;
     }
 }

@@ -9,7 +9,7 @@ namespace Tyuiu.BayazitovEA.Sprint6.Task0.V6.Test
         {
             DataService ds =  new DataService();
             double res = ds.Calculate(3);
-            double wait = 1 ;
+            double wait = 0.866;
             Assert.AreEqual(wait, res);
         }
     }

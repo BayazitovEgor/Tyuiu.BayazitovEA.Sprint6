@@ -13,17 +13,22 @@ namespace Tyuiu.BayazitovEA.Sprint6.Task0.V6
             DataService ds = new DataService();
             try
             {
-                textBox1.Text = Convert.ToString(ds.Calculate(Convert.ToInt32(textBox2.Text)));
+                textBox1.Text = Convert.ToString(ds.Calculate(Convert.ToInt32(textBoxInPut.Text)));
             }
-            catch 
+            catch
             {
-                MessageBox.Show("введены неверные данные","ошибка",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("введены неверные данные", "ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void textBoxInPut_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Таск 0 выполнил студент группы ПИНб-25-1 Баязитов Егор Александрович", "справка");
         }
     }
 }
