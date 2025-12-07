@@ -15,7 +15,7 @@ namespace Tyuiu.BayazitovEA.Sprint6.Task1.V1.Lib
             for (int x = startValue; x <= stopValue; x++)
             {
                 
-                y = Math.Round(Math.Cos(2*x)+(Math.Sin(x)/x+2.5)+2*x, 2);
+                y = Math.Round(Math.Cos(2 * x) + (Math.Sin(x) / (x + 2.5)) + 2 * x, 2);
                 results[count] = y;
                 if (x == 0) { results[count] = 0; }
                 count++;
