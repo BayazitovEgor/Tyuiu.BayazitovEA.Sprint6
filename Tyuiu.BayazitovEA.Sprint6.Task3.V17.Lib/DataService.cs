@@ -8,23 +8,22 @@ namespace Tyuiu.BayazitovEA.Sprint6.Task3.V17.Lib
             int rows = matrix.GetLength(0);
             int columns = matrix.GetLength(1);
 
-            // Сортируем строки по 4-му столбцу (индекс 3)
-            for (int i = 0; i < rows - 1; i++)
+            // Собираем значения 4-го столбца (индекс 3)
+            int[] fourthColumn = new int[rows];
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = i + 1; j < rows; j++)
-                {
-                    if (matrix[i, 3] > matrix[j, 3])
-                    {
-                        // Меняем строки i и j местами
-                        for (int k = 0; k < columns; k++)
-                        {
-                            int temp = matrix[i, k];
-                            matrix[i, k] = matrix[j, k];
-                            matrix[j, k] = temp;
-                        }
-                    }
-                }
+                fourthColumn[i] = matrix[i, 3];
             }
+
+            // Сортируем значения 4-го столбца
+            Array.Sort(fourthColumn);
+
+            // Заменяем значения в 4-м столбце на отсортированные
+            for (int i = 0; i < rows; i++)
+            {
+                matrix[i, 3] = fourthColumn[i];
+            }
+
             return matrix;
         }
     }
