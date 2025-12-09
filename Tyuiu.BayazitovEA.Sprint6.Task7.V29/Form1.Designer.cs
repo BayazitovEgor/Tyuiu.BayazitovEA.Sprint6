@@ -39,20 +39,22 @@
             dataGridView1 = new DataGridView();
             dataGridView2 = new DataGridView();
             toolTip1 = new ToolTip(components);
+            groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = Properties.Resources.folder_page;
-            button1.Location = new Point(12, 12);
+            button1.Location = new Point(6, 28);
             button1.Name = "button1";
             button1.Size = new Size(75, 66);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += button1_Click_1;
             button1.MouseEnter += button1_Click;
             // 
             // button2
@@ -60,7 +62,7 @@
             button2.Enabled = false;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Image = Properties.Resources.page_go;
-            button2.Location = new Point(108, 12);
+            button2.Location = new Point(87, 28);
             button2.Name = "button2";
             button2.Size = new Size(75, 66);
             button2.TabIndex = 1;
@@ -73,7 +75,7 @@
             button3.Enabled = false;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Image = Properties.Resources.page_save;
-            button3.Location = new Point(202, 12);
+            button3.Location = new Point(168, 28);
             button3.Name = "button3";
             button3.Size = new Size(75, 66);
             button3.TabIndex = 2;
@@ -98,17 +100,17 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 84);
+            dataGridView1.Location = new Point(12, 118);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(393, 341);
+            dataGridView1.Size = new Size(393, 307);
             dataGridView1.TabIndex = 4;
             // 
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(432, 84);
+            dataGridView2.Location = new Point(432, 118);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(356, 341);
+            dataGridView2.Size = new Size(356, 307);
             dataGridView2.TabIndex = 5;
             // 
             // toolTip1
@@ -116,21 +118,32 @@
             toolTip1.IsBalloon = true;
             toolTip1.ToolTipTitle = "Подсказка";
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(button3);
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(button1);
+            groupBox1.Location = new Point(12, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(260, 100);
+            groupBox1.TabIndex = 6;
+            groupBox1.TabStop = false;
+            groupBox1.Text = " основные кнопки";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 437);
+            Controls.Add(groupBox1);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
             Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
             Name = "Form1";
             Text = "Спринт 6 | Таск 7 | Баязитов Е. А.";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -145,5 +158,6 @@
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
         private ToolTip toolTip1;
+        private GroupBox groupBox1;
     }
 }

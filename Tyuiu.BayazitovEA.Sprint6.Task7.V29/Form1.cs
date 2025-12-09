@@ -120,10 +120,16 @@ namespace Tyuiu.BayazitovEA.Sprint6.Task7.V29
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Form2 formAbout = new Form2();
+            formAbout.ShowDialog();
         }
 
         private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip1.ToolTipTitle = "Выполнить";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             toolTip1.ToolTipTitle = "Выполнить";
         }
