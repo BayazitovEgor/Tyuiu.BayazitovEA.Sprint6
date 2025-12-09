@@ -15,7 +15,12 @@ namespace Tyuiu.BayazitovEA.Sprint6.Task3.V17
                                      { 11 , 20 , 12 , 27 , 29}};
         private void button1_Click(object sender, EventArgs e)
         {
-            textBoxRes.Text=Convert.ToString(ds.Calculate(mtrx));
+            textBoxRes.Text = Convert.ToString(ds.Calculate(mtrx));
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
