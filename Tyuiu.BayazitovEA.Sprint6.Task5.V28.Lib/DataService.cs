@@ -24,7 +24,7 @@ namespace Tyuiu.BayazitovEA.Sprint6.Task5.V28.Lib
                 { numsArray[index]=Convert.ToDouble(line); 
                 index++;}
             }
-            numsArray = numsArray.Where(val=>val>0).ToArray();
+            numsArray = numsArray.Where(val=>val<10).ToArray();
             return numsArray;
         }
     }
