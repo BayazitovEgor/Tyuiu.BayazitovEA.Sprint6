@@ -129,7 +129,7 @@ namespace Tyuiu.BayazitovEA.Sprint6.Task7.V29
             toolTip1.ToolTipTitle = "Выполнить";
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_MouseEnter(object sender, EventArgs e)
         {
             toolTip1.ToolTipTitle = "Выполнить";
         }
